@@ -8,33 +8,6 @@ Team: Daniel Gonzales, Ethan Florendo, Isaak Truong
 
 A real-time 3-band audio equalizer implemented on the PYNQ-Z2 FPGA board. Audio is captured through the onboard ADAU1761 codec, processed in the frequency domain via FFT/IFFT on the programmable logic, and output in real time. Gain for the low, mid, and high frequency bands is adjustable at runtime through a Python/Jupyter interface.
 
-## Repository Structure
-
-```
-hls/
-  src/
-    audio_equalizer.h       # Types, constants, FFT size/bin boundaries
-    audio_equalizer.cpp     # HLS top-level: FFT → gain → IFFT, AXI interfaces
-  scripts/
-    gen_lut.py              # Generates cos_lut.h / sin_lut.h twiddle tables
-  tb/
-    tb_audio_equalizer.cpp  # C simulation testbench
-
-vivado/
-  scripts/
-    create_project.tcl      # Creates the Vivado project
-    block_design.tcl        # Block design: Zynq PS + HLS IP + AXI DMA + IIC
-  constraints/
-    pynq_z2.xdc             # ADAU1761 I2S pin assignments and timing
-
-pynq/
-  equalizer_control.py      # Python driver: loads overlay, writes AXI-Lite gains
-  equalizer_overlay.ipynb   # Jupyter notebook with interactive sliders
-
-cpu_reference/
-  cpu_equalizer.py          # NumPy reference implementation for benchmarking
-```
-
 ## Hardware
 
 - **Board:** PYNQ-Z2 (Zynq XC7Z020)
@@ -47,12 +20,6 @@ cpu_reference/
 Line-In → ADC → I2S RX → [FFT → Band Gain → IFFT] → I2S TX → DAC → Line-Out
                               (Programmable Logic)
 ```
-
-| Band | Frequency Range  | FFT Bins (1024-pt @ 48 kHz) |
-|------|-----------------|------------------------------|
-| Low  | 0 – 250 Hz      | 0 – 5                        |
-| Mid  | 250 – 4000 Hz   | 6 – 85                       |
-| High | 4000 – 24000 Hz | 86 – 511                     |
 
 ## Build Instructions
 
