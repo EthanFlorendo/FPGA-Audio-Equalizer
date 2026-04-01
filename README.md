@@ -1,6 +1,6 @@
 # FPGA-Based Real-Time Audio Equalizer
 
-Class project for Reconfigurable Computing (CSE494).
+Project for Reconfigurable Computing.
 
 Team: Daniel Gonzales, Ethan Florendo, Isaak Truong
 
