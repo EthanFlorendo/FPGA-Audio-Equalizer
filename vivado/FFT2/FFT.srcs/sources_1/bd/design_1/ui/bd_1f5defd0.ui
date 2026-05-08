@@ -1,0 +1,68 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.959515",
+   "Default View_TopLeft":"577,-806",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.7.1 2023-07-26 3bc4126617 VDI=43 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 6 -x 2510 -y -370 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 6 -x 2510 -y -250 -defaultsOSRD
+preplace inst xfft_forward -pg 1 -lvl 4 -x 1840 -y -140 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 4 -x 1840 -y -450 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 3 -x 1310 -y -730 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 4 -x 1840 -y -730 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -x 610 -y -360 -defaultsOSRD
+preplace inst axi_dma_config -pg 1 -lvl 3 -x 1310 -y -540 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 5 -x 2320 -y -740 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 5 -x 2320 -y -130 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 5 -x 2320 -y 50 -defaultsOSRD
+preplace inst xfft_reverse -pg 1 -lvl 3 -x 1310 -y -350 -defaultsOSRD
+preplace inst axi_dma_config1 -pg 1 -lvl 1 -x 610 -y -190 -defaultsOSRD
+preplace inst axis_fft_eq_0 -pg 1 -lvl 3 -x 1310 -y -140 -defaultsOSRD
+preplace inst axi_gpio_gain -pg 1 -lvl 4 -x 1840 -y 90 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 2 -x 930 -y -10 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 2 -x 930 -y 120 -defaultsOSRD
+preplace inst axis_scale_down_by_10_0 -pg 1 -lvl 2 -x 930 -y -430 -defaultsOSRD
+preplace netloc axi_gpio_1_gpio2_io_o 1 2 3 1120 -10 N -10 2060
+preplace netloc axi_gpio_gain_gpio_io_o 1 1 4 810 60 N 60 1510 180 2070
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 5 420 -470 800 -510 1080 -900 1550 -280 2160
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 5 400 -910 N -910 N -910 1600J -290 2070
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 0 5 430 -460 790 -520 1090 -30 1570 -260 2170
+preplace netloc xfft_0_event_data_in_channel_halt 1 4 1 2090 -100n
+preplace netloc xfft_0_event_data_out_channel_halt 1 4 1 2080 -80n
+preplace netloc xfft_0_event_frame_started 1 4 1 2140 -180n
+preplace netloc xfft_0_event_status_channel_halt 1 4 1 2100 -120n
+preplace netloc xfft_0_event_tlast_missing 1 4 1 2110 -140n
+preplace netloc xfft_0_event_tlast_unexpected 1 4 1 2120 -160n
+preplace netloc xlconcat_0_dout 1 5 1 2470 -120n
+preplace netloc xlslice_0_Dout 1 2 1 1060 -130n
+preplace netloc xlslice_1_Dout 1 2 1 1100 -110n
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 3 1 1530 -750n
+preplace netloc axi_dma_0_M_AXI_MM2S 1 3 2 1520J -940 2170J
+preplace netloc axi_dma_0_M_AXI_S2MM 1 3 2 1530 -930 2160J
+preplace netloc axi_dma_config1_M_AXIS_MM2S 1 1 2 810 -350 N
+preplace netloc axi_dma_config1_M_AXI_MM2S 1 1 4 NJ -220 1050 -20 NJ -20 2130
+preplace netloc axi_dma_config_M_AXIS_MM2S 1 3 1 1520 -550n
+preplace netloc axi_dma_config_M_AXI_MM2S 1 3 2 1560 -350 2120J
+preplace netloc axi_mem_intercon_M00_AXI 1 3 3 1610 -300 NJ -300 2470
+preplace netloc axis_fft_eq_0_m_axis 1 2 2 1110 -860 1500
+preplace netloc processing_system7_0_DDR 1 4 2 NJ -490 2490
+preplace netloc processing_system7_0_FIXED_IO 1 4 2 NJ -470 2480
+preplace netloc processing_system7_0_M_AXI_GP0 1 3 2 1620 -340 2060J
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 3 1120 -850 1540J -310 2110J
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 3 1100 -870 1580J -330 2090
+preplace netloc ps7_0_axi_periph_M02_AXI 1 4 1 2150 -730n
+preplace netloc ps7_0_axi_periph_M03_AXI 1 0 5 410 -890 NJ -890 N -890 1590J -320 2080
+preplace netloc ps7_0_axi_periph_M04_AXI 1 3 2 1610 -270 2100
+preplace netloc xfft_forward_M_AXIS_DATA 1 2 3 1110 0 NJ 0 2070
+preplace netloc xfft_reverse_M_AXIS_DATA 1 1 3 810 -880 NJ -880 1510
+preplace netloc axis_scale_down_by_10_0_m_axis 1 2 1 1050 -760n
+levelinfo -pg 1 0 610 930 1310 1840 2320 2510
+pagesize -pg 1 -db -bbox -sgen -50 -950 4360 390
+"
+}
+{
+   "da_axi4_cnt":"11",
+   "da_board_cnt":"1",
+   "da_ps7_cnt":"2"
+}
