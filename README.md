@@ -136,7 +136,7 @@ Run implementation.
 Generate bitstream.
 Export/copy .bit and .hwh to the PYNQ board.
 
-#Important: 
+##Important: 
 There are 2 Vivado projects in here, FFT2 has the DMA registers with FFT and IFFT testing, its associated PYNQ file is WorkingFFT
 The FFT Vivado project file contains 2 designs; the top file must be selected depending on what you want to build for the bitstream.
 design2 has the audio passthrough files, it is meant for audio testing and debugging I2S
