@@ -119,7 +119,7 @@ I2S transmitter accepts valid AXI audio words
 I2S receiver decodes known serial test data
 RX-to-TX AXI-stream bypass is functional
 Audio sample extractor and repacker are functional
-Gain control GPIO is present
+Gain control, GPIO is present
 
 The full FFT/IFFT streaming path is still under debug. Current testing shows valid audio framing at the output, but sample payloads may become zero after the FFT chain. The next debugging step is to probe each FFT-chain stage individually.
 
@@ -135,3 +135,9 @@ Run synthesis.
 Run implementation.
 Generate bitstream.
 Export/copy .bit and .hwh to the PYNQ board.
+
+#Important: 
+There are 2 Vivado projects in here, FFT2 has the DMA registers with FFT and IFFT testing, its associated PYNQ file is WorkingFFT
+The FFT Vivado project file contains 2 designs; the top file must be selected depending on what you want to build for the bitstream.
+design2 has the audio passthrough files, it is meant for audio testing and debugging I2S
+design3 had the full design using I2S, FFT, and IFFT; there are known bugs with this design, as we discussed in the demo.
