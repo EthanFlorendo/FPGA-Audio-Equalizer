@@ -138,7 +138,7 @@ Export/copy .bit and .hwh to the PYNQ board.
 
 ## Important
 
-There are 2 Vivado projects in here, FFT2 has the DMA registers with FFT and IFFT testing, its associated PYNQ file is WorkingFFT
+There are 2 Vivado projects in here, FFT2 has the DMA registers with FFT and IFFT testing, its associated PYNQ file is "WorkingFFT.ipynb"
 The FFT Vivado project file contains 2 designs; the top file must be selected depending on what you want to build for the bitstream.
-design2 has the audio passthrough files, it is meant for audio testing and debugging I2S
-design3 had the full design using I2S, FFT, and IFFT; there are known bugs with this design, as we discussed in the demo.
+design2 has the audio passthrough files, it is meant for audio testing and debugging I2S. The associated PYNQ file is "Audio passthrough test.ipynb"
+design3 had the full design using I2S, FFT, and IFFT; there are known bugs with this design, as we discussed in the demo. The associated file is "Full.ipynb"
